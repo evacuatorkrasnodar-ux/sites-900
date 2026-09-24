@@ -1,68 +1,82 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Заказать сайт — форма заявки</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/sites-900/style.css">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Заказать сайт — создание сайта от 1000 ₽</title>
+
+  <meta
+    name="description"
+    content="Закажите индивидуальный сайт. Создание сайта от 1000 ₽. Адаптивная вёрстка, современный дизайн, домен и подключение контактов."
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/sites-900/style.css"
+  >
 </head>
+
 
 <body>
 
-<header>
-  <h1>Заказать сайт</h1>
-  <p>Заполните форму — я свяжусь с вами и уточню детали.</p>
-</header>
+  <!-- Фоновый слой -->
 
-<section id="order">
-  <h2>Форма заявки</h2>
+  <div class="parallax-bg"></div>
 
-  <form action="mailto:79996362202@ya.ru" method="post" enctype="text/plain" class="order-form">
+  <div class="ambient-light ambient-light-1"></div>
+  <div class="ambient-light ambient-light-2"></div>
+  <div class="ambient-light ambient-light-3"></div>
 
-    <label>Ваше имя:</label>
-    <input type="text" name="Имя" required>
 
-    <label>Телефон:</label>
-    <input type="text" name="Телефон" required>
+  <!-- =========================
+       HERO
+  ========================== -->
 
-    <label>Сколько экранов нужно?</label>
-    <select name="Количество экранов">
-      <option value="1 экран">1 экран — 1000 ₽</option>
-      <option value="2–3 экрана">2–3 экрана — 2100 ₽</option>
-      <option value="4–6 экранов">4–6 экранов — 3700 ₽</option>
-    </select>
+  <header class="hero">
 
-    <label>Нужен домен?</label>
-    <select name="Домен">
-      <option value="Не нужен">Не нужен</option>
-      <option value="Нужен">Нужен (+500 ₽)</option>
-    </select>
+    <div class="hero-badge">
 
-    <label>Нужен логотип?</label>
-    <select name="Логотип">
-      <option value="Да">Да (бесплатно)</option>
-      <option value="Нет">Нет</option>
-    </select>
+      <span class="hero-badge-dot"></span>
 
-    <label>Техническое задание:</label>
-    <textarea name="ТЗ" rows="6" placeholder="Опишите сайт: структура, цвета, примеры, ссылки..."></textarea>
+      ЗАКАЗ САЙТА
 
-    <button type="submit" class="btn" style="margin-top:25px;">Отправить заявку</button>
-  </form>
+    </div>
 
-  <p style="margin-top:20px;">
-    Или напишите напрямую:  
-    <a href="https://wa.me/79996362202">WhatsApp</a> · 
-    <a href="https://t.me/+79996362202">Telegram</a>
-  </p>
-</section>
 
-<footer>
-  <div class="footer-bottom">
-    <p>© 2026 Создание сайтов — Roman</p>
-  </div>
-</footer>
+    <h1>
+      Создадим сайт,
+      <span>который работает на вас.</span>
+    </h1>
 
-</body>
-</html>
+
+    <p class="hero-subtitle">
+      Заполните короткую форму ниже.
+      Я изучу задачу, уточню детали и предложу
+      подходящий вариант реализации.
+    </p>
+
+
+    <div class="hero-offer">
+      <strong>От 1000 ₽</strong>
+      · индивидуальная разработка
+      · адаптивная версия
+    </div>
+
+
+    <div class="hero-scroll">
+      ↓ ЗАПОЛНИТЕ ФОРМУ
+    </div>
+
+ 
