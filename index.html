@@ -11,6 +11,7 @@
   <meta
     name="theme-color"
     content="#07090d"
+    id="theme-color"
   >
 
   <meta
@@ -25,22 +26,23 @@
     href="https://evacuatorkrasnodar-ux.github.io/sites-900/"
   >
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
+
   <meta
     property="og:title"
     content="ROMAN DIGITAL — создание сайтов от 1000 ₽"
   >
+
   <meta
     property="og:description"
     content="Современные сайты и лендинги на чистом HTML, CSS и JavaScript."
   >
+
   <meta
     property="og:url"
     content="https://evacuatorkrasnodar-ux.github.io/sites-900/"
   >
 
-  <!-- Шрифт -->
   <link
     rel="preconnect"
     href="https://fonts.googleapis.com"
@@ -57,13 +59,31 @@
     rel="stylesheet"
   >
 
-  <!-- Главный CSS -->
   <link
     rel="stylesheet"
     href="./style.css"
   >
 
-  <!-- SEO -->
+  <!-- =====================================================
+       ТЕМА
+  ====================================================== -->
+
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("roman-theme");
+
+      if (savedTheme === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+
+  <!-- =====================================================
+       SEO
+  ====================================================== -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -76,7 +96,9 @@
     "url": "https://evacuatorkrasnodar-ux.github.io/sites-900/"
   }
   </script>
+
 </head>
+
 
 <body>
 
@@ -85,10 +107,13 @@
   ====================================================== -->
 
   <div class="site-background" aria-hidden="true">
+
     <div class="bg-grid"></div>
+
     <div class="bg-glow bg-glow-one"></div>
     <div class="bg-glow bg-glow-two"></div>
     <div class="bg-glow bg-glow-three"></div>
+
   </div>
 
 
@@ -100,17 +125,27 @@
 
     <div class="container header-inner">
 
+
       <a
         href="./index.html"
         class="brand"
         aria-label="ROMAN DIGITAL — главная"
       >
 
-        <span class="brand-mark">R</span>
+        <span class="brand-mark">
+          R
+        </span>
 
         <span class="brand-text">
-          <strong>ROMAN</strong>
-          <small>DIGITAL</small>
+
+          <strong>
+            ROMAN
+          </strong>
+
+          <small>
+            DIGITAL
+          </small>
+
         </span>
 
       </a>
@@ -121,23 +156,74 @@
         aria-label="Основная навигация"
       >
 
-        <a href="#about">Подход</a>
-        <a href="#services">Возможности</a>
-        <a href="#prices">Цены</a>
-        <a href="#process">Процесс</a>
+        <a href="#about">
+          Подход
+        </a>
+
+        <a href="#services">
+          Возможности
+        </a>
+
+        <a href="#prices">
+          Цены
+        </a>
+
+        <a href="#process">
+          Процесс
+        </a>
+
+        <a href="#payment">
+          Оплата
+        </a>
 
       </nav>
 
 
-      <a
-        href="./order.html"
-        class="header-order"
-      >
+      <div class="header-actions">
 
-        <span>Заказать</span>
-        <b>→</b>
+        <!-- ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ -->
 
-      </a>
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Переключить тему"
+          aria-pressed="false"
+        >
+
+          <span class="theme-icon theme-sun">
+            ☀
+          </span>
+
+          <span class="theme-toggle-track">
+
+            <span class="theme-toggle-thumb"></span>
+
+          </span>
+
+          <span class="theme-icon theme-moon">
+            ☾
+          </span>
+
+        </button>
+
+
+        <a
+          href="./order.html"
+          class="header-order"
+        >
+
+          <span>
+            Заказать
+          </span>
+
+          <b>
+            →
+          </b>
+
+        </a>
+
+      </div>
 
     </div>
 
@@ -162,35 +248,57 @@
 
         <div class="hero-content">
 
+
           <div class="eyebrow">
+
             <span class="eyebrow-dot"></span>
+
             Сайты на чистом коде
+
           </div>
 
 
           <h1>
+
             Сайт,
-            <span>который</span>
-            <em>запоминают.</em>
+
+            <span>
+              который
+            </span>
+
+            <em>
+              запоминают.
+            </em>
+
           </h1>
 
 
           <p class="hero-description">
+
             Современные сайты и лендинги
             для мастеров, услуг и небольшого бизнеса.
             От идеи до готовой страницы —
             без лишнего.
+
           </p>
 
 
           <div class="hero-actions">
 
+
             <a
               href="./order.html"
               class="button button-primary"
             >
-              <span>Создать мой сайт</span>
-              <b>↗</b>
+
+              <span>
+                Создать мой сайт
+              </span>
+
+              <b>
+                ↗
+              </b>
+
             </a>
 
 
@@ -198,66 +306,118 @@
               href="#prices"
               class="button button-secondary"
             >
+
               Посмотреть цены
+
             </a>
+
 
           </div>
 
 
           <div class="hero-note">
+
             <span class="status-dot"></span>
-            Принимаю новые проекты
+
+            Оплата после полной готовности сайта
+
           </div>
+
 
         </div>
 
 
-        <!-- Визуальная карточка -->
+        <!-- =================================================
+             HERO VISUAL
+        ================================================== -->
 
         <div class="hero-visual">
 
+
           <div class="visual-orbit orbit-one"></div>
+
           <div class="visual-orbit orbit-two"></div>
 
 
           <div class="visual-card">
 
+
             <div class="visual-top">
-              <span>YOUR WEBSITE</span>
-              <span>01 / 01</span>
+
+              <span>
+                YOUR WEBSITE
+              </span>
+
+              <span>
+                01 / 01
+              </span>
+
             </div>
 
 
             <div class="visual-main">
 
+
               <div class="visual-kicker">
                 DIGITAL PRESENCE
               </div>
 
+
               <div class="visual-title">
+
                 Сделано
-                <strong>под вас.</strong>
+
+                <strong>
+                  под вас.
+                </strong>
+
               </div>
+
 
               <div class="visual-line"></div>
 
 
               <div class="visual-mini-grid">
 
-                <div>
-                  <strong>1000 ₽</strong>
-                  <span>старт</span>
-                </div>
 
                 <div>
-                  <strong>HTML</strong>
-                  <span>CSS · JS</span>
+
+                  <strong>
+                    1000 ₽
+                  </strong>
+
+                  <span>
+                    старт
+                  </span>
+
                 </div>
 
+
                 <div>
-                  <strong>24/7</strong>
-                  <span>онлайн</span>
+
+                  <strong>
+                    HTML
+                  </strong>
+
+                  <span>
+                    CSS · JS
+                  </span>
+
                 </div>
+
+
+                <div>
+
+                  <strong>
+                    24/7
+                  </strong>
+
+                  <span>
+                    онлайн
+                  </span>
+
+                </div>
+
 
               </div>
 
@@ -265,23 +425,44 @@
 
 
             <div class="visual-bottom">
-              <span>ROMAN DIGITAL</span>
-              <span>2026</span>
+
+              <span>
+                ROMAN DIGITAL
+              </span>
+
+              <span>
+                2026
+              </span>
+
             </div>
+
 
           </div>
 
 
           <div class="floating-badge badge-price">
-            <span>от</span>
-            <strong>1000 ₽</strong>
+
+            <span>
+              от
+            </span>
+
+            <strong>
+              1000 ₽
+            </strong>
+
           </div>
 
 
           <div class="floating-badge badge-code">
-            <span>&lt;/&gt;</span>
+
+            <span>
+              &lt;/&gt;
+            </span>
+
             Clean code
+
           </div>
+
 
         </div>
 
@@ -289,45 +470,89 @@
 
 
       <div class="hero-scroll">
+
         <span></span>
+
         SCROLL TO EXPLORE
+
       </div>
 
     </section>
 
 
     <!-- ===================================================
-         TRUST BAR
+         TRUST
     ==================================================== -->
 
     <section class="trust-bar">
 
       <div class="container trust-inner">
 
-        <div>
-          <strong>01</strong>
-          <span>Чистый код</span>
-        </div>
 
         <div>
-          <strong>02</strong>
-          <span>Адаптив</span>
+
+          <strong>
+            01
+          </strong>
+
+          <span>
+            Чистый код
+          </span>
+
         </div>
 
-        <div>
-          <strong>03</strong>
-          <span>Быстрый запуск</span>
-        </div>
 
         <div>
-          <strong>04</strong>
-          <span>Без конструктора</span>
+
+          <strong>
+            02
+          </strong>
+
+          <span>
+            Адаптив
+          </span>
+
         </div>
 
+
         <div>
-          <strong>05</strong>
-          <span>Под вашу задачу</span>
+
+          <strong>
+            03
+          </strong>
+
+          <span>
+            Быстрый запуск
+          </span>
+
         </div>
+
+
+        <div>
+
+          <strong>
+            04
+          </strong>
+
+          <span>
+            Без конструктора
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <strong>
+            05
+          </strong>
+
+          <span>
+            Оплата после готовности
+          </span>
+
+        </div>
+
 
       </div>
 
@@ -345,24 +570,34 @@
 
       <div class="container">
 
+
         <div class="section-heading">
+
 
           <div class="section-number">
             01
           </div>
 
+
           <div>
+
             <span class="section-kicker">
               ПОДХОД
             </span>
 
+
             <h2>
+
               Маленькая цена.
+
               <span>
                 Большое внимание к деталям.
               </span>
+
             </h2>
+
           </div>
+
 
         </div>
 
@@ -372,63 +607,104 @@
 
           <div class="about-lead">
 
+
             <p class="large-text">
+
               Если вам нужен простой сайт,
               который понятно показывает услугу
               и приводит клиента к звонку
               или сообщению — не обязательно
               делать огромную платформу.
+
             </p>
 
+
             <p>
+
               Структура, содержание, визуальные акценты
               и мобильная версия продумываются
               под конкретную задачу.
+
             </p>
+
 
           </div>
 
 
           <div class="about-points">
 
+
             <article>
-              <span>01</span>
-              <h3>Без шаблонного ощущения</h3>
+
+              <span>
+                01
+              </span>
+
+              <h3>
+                Без шаблонного ощущения
+              </h3>
+
               <p>
                 Визуальная система собирается
                 под конкретную услугу.
               </p>
+
             </article>
 
 
             <article>
-              <span>02</span>
-              <h3>Чистая технология</h3>
+
+              <span>
+                02
+              </span>
+
+              <h3>
+                Чистая технология
+              </h3>
+
               <p>
                 HTML, CSS и JavaScript
                 без ненужной тяжёлой оболочки.
               </p>
+
             </article>
 
 
             <article>
-              <span>03</span>
-              <h3>Сначала смысл</h3>
+
+              <span>
+                03
+              </span>
+
+              <h3>
+                Сначала смысл
+              </h3>
+
               <p>
                 Сначала определяем,
                 что должен понять посетитель.
               </p>
+
             </article>
 
 
             <article>
-              <span>04</span>
-              <h3>Потом визуал</h3>
+
+              <span>
+                04
+              </span>
+
+              <h3>
+                Потом визуал
+              </h3>
+
               <p>
                 Дизайн помогает человеку
                 быстро найти нужную информацию.
               </p>
+
             </article>
+
 
           </div>
 
@@ -450,22 +726,34 @@
 
       <div class="container">
 
+
         <div class="section-heading">
+
 
           <div class="section-number">
             02
           </div>
 
+
           <div>
+
             <span class="section-kicker">
               ВОЗМОЖНОСТИ
             </span>
 
+
             <h2>
+
               Всё необходимое
-              <span>уже внутри.</span>
+
+              <span>
+                уже внутри.
+              </span>
+
             </h2>
+
           </div>
+
 
         </div>
 
@@ -475,10 +763,17 @@
 
           <article class="service-card service-large">
 
-            <div class="service-number">01</div>
-            <div class="service-icon">↗</div>
+            <div class="service-number">
+              01
+            </div>
 
-            <h3>Современный дизайн</h3>
+            <div class="service-icon">
+              ↗
+            </div>
+
+            <h3>
+              Современный дизайн
+            </h3>
 
             <p>
               Аккуратная типографика,
@@ -495,10 +790,17 @@
 
           <article class="service-card">
 
-            <div class="service-number">02</div>
-            <div class="service-icon">◌</div>
+            <div class="service-number">
+              02
+            </div>
 
-            <h3>Адаптив</h3>
+            <div class="service-icon">
+              ◌
+            </div>
+
+            <h3>
+              Адаптив
+            </h3>
 
             <p>
               Сайт рассчитан на телефон,
@@ -514,10 +816,17 @@
 
           <article class="service-card">
 
-            <div class="service-number">03</div>
-            <div class="service-icon">&lt;/&gt;</div>
+            <div class="service-number">
+              03
+            </div>
 
-            <h3>Чистый код</h3>
+            <div class="service-icon">
+              &lt;/&gt;
+            </div>
+
+            <h3>
+              Чистый код
+            </h3>
 
             <p>
               HTML, CSS и JavaScript
@@ -533,10 +842,17 @@
 
           <article class="service-card">
 
-            <div class="service-number">04</div>
-            <div class="service-icon">⚡</div>
+            <div class="service-number">
+              04
+            </div>
 
-            <h3>Быстрая загрузка</h3>
+            <div class="service-icon">
+              ⚡
+            </div>
+
+            <h3>
+              Быстрая загрузка
+            </h3>
 
             <p>
               Лёгкая структура помогает
@@ -552,10 +868,17 @@
 
           <article class="service-card">
 
-            <div class="service-number">05</div>
-            <div class="service-icon">◎</div>
+            <div class="service-number">
+              05
+            </div>
 
-            <h3>Связь с клиентом</h3>
+            <div class="service-icon">
+              ◎
+            </div>
+
+            <h3>
+              Связь с клиентом
+            </h3>
 
             <p>
               Телефон, Telegram, WhatsApp,
@@ -571,10 +894,17 @@
 
           <article class="service-card service-wide">
 
-            <div class="service-number">06</div>
-            <div class="service-icon">+</div>
+            <div class="service-number">
+              06
+            </div>
 
-            <h3>Можно расширить</h3>
+            <div class="service-icon">
+              +
+            </div>
+
+            <h3>
+              Можно расширить
+            </h3>
 
             <p>
               Карта, дополнительные экраны,
@@ -607,35 +937,54 @@
 
         <div class="showcase-copy">
 
+
           <span class="section-kicker">
             ПРИНЦИП
           </span>
 
+
           <h2>
+
             Не пытаемся
-            <span>понравиться всем.</span>
+
+            <span>
+              понравиться всем.
+            </span>
+
           </h2>
 
+
           <p>
+
             Хороший сайт должен быстро объяснить:
             что вы предлагаете, почему это подходит
             посетителю и что делать дальше.
+
           </p>
+
 
           <a
             href="./order.html"
             class="text-link"
           >
+
             Обсудить проект
-            <span>→</span>
+
+            <span>
+              →
+            </span>
+
           </a>
+
 
         </div>
 
 
         <div class="showcase-visual">
 
+
           <div class="showcase-frame">
+
 
             <div class="frame-header">
 
@@ -657,18 +1006,24 @@
               </small>
 
               <strong>
+
                 Ваша услуга.
                 <br>
                 Понятно.
                 <br>
                 Уверенно.
+
               </strong>
 
+
               <div class="frame-button">
+
                 Узнать подробнее →
+
               </div>
 
             </div>
+
 
           </div>
 
@@ -690,11 +1045,14 @@
 
       <div class="container">
 
+
         <div class="section-heading">
+
 
           <div class="section-number">
             03
           </div>
+
 
           <div>
 
@@ -702,12 +1060,19 @@
               СТОИМОСТЬ
             </span>
 
+
             <h2>
+
               Понятные тарифы.
-              <span>Без тумана.</span>
+
+              <span>
+                Без тумана.
+              </span>
+
             </h2>
 
           </div>
+
 
         </div>
 
@@ -717,28 +1082,58 @@
 
           <article class="price-card">
 
+
             <div class="price-top">
-              <span>START</span>
-              <span>01</span>
+
+              <span>
+                START
+              </span>
+
+              <span>
+                01
+              </span>
+
             </div>
 
-            <h3>Одноэкранный</h3>
+
+            <h3>
+              Одноэкранный
+            </h3>
+
 
             <p>
+
               Для простой услуги,
               мастера или быстрого старта.
+
             </p>
+
 
             <div class="price">
               1 000 ₽
             </div>
 
+
             <ul>
-              <li>Одноэкранная структура</li>
-              <li>Адаптив</li>
-              <li>Кнопки связи</li>
-              <li>HTML / CSS / JS</li>
+
+              <li>
+                Одноэкранная структура
+              </li>
+
+              <li>
+                Адаптив
+              </li>
+
+              <li>
+                Кнопки связи
+              </li>
+
+              <li>
+                HTML / CSS / JS
+              </li>
+
             </ul>
+
 
             <a
               href="./order.html"
@@ -746,39 +1141,74 @@
             >
               Выбрать →
             </a>
+
 
           </article>
 
 
           <article class="price-card price-featured">
 
+
             <div class="price-label">
               ПОПУЛЯРНЫЙ ФОРМАТ
             </div>
 
+
             <div class="price-top">
-              <span>BUSINESS</span>
-              <span>02</span>
+
+              <span>
+                BUSINESS
+              </span>
+
+              <span>
+                02
+              </span>
+
             </div>
 
-            <h3>2–3 экрана</h3>
+
+            <h3>
+              2–3 экрана
+            </h3>
+
 
             <p>
+
               Для бизнеса, услуги или
               полноценного представления.
+
             </p>
+
 
             <div class="price">
               2 100 ₽
             </div>
 
+
             <ul>
-              <li>2–3 логических экрана</li>
-              <li>Адаптив</li>
-              <li>Блоки преимуществ</li>
-              <li>Контакты и CTA</li>
-              <li>Современная анимация</li>
+
+              <li>
+                2–3 логических экрана
+              </li>
+
+              <li>
+                Адаптив
+              </li>
+
+              <li>
+                Блоки преимуществ
+              </li>
+
+              <li>
+                Контакты и CTA
+              </li>
+
+              <li>
+                Современная анимация
+              </li>
+
             </ul>
+
 
             <a
               href="./order.html"
@@ -787,34 +1217,68 @@
               Выбрать →
             </a>
 
+
           </article>
 
 
           <article class="price-card">
 
+
             <div class="price-top">
-              <span>PRO</span>
-              <span>03</span>
+
+              <span>
+                PRO
+              </span>
+
+              <span>
+                03
+              </span>
+
             </div>
 
-            <h3>4–6 экранов</h3>
+
+            <h3>
+              4–6 экранов
+            </h3>
+
 
             <p>
+
               Для проекта, которому
               нужно больше пространства.
+
             </p>
+
 
             <div class="price">
               3 700 ₽
             </div>
 
+
             <ul>
-              <li>4–6 экранов</li>
-              <li>Расширенная структура</li>
-              <li>Галерея / FAQ</li>
-              <li>Дополнительные блоки</li>
-              <li>Индивидуальная подача</li>
+
+              <li>
+                4–6 экранов
+              </li>
+
+              <li>
+                Расширенная структура
+              </li>
+
+              <li>
+                Галерея / FAQ
+              </li>
+
+              <li>
+                Дополнительные блоки
+              </li>
+
+              <li>
+                Индивидуальная подача
+              </li>
+
             </ul>
+
 
             <a
               href="./order.html"
@@ -823,6 +1287,7 @@
               Обсудить →
             </a>
 
+
           </article>
 
 
@@ -830,11 +1295,17 @@
 
 
         <div class="price-note">
-          <span>*</span>
+
+          <span>
+            *
+          </span>
+
           Итоговая стоимость зависит от состава
           и объёма проекта. Дополнительные функции
           согласовываются заранее.
+
         </div>
+
 
       </div>
 
@@ -852,11 +1323,14 @@
 
       <div class="container">
 
+
         <div class="section-heading">
+
 
           <div class="section-number">
             04
           </div>
+
 
           <div>
 
@@ -864,12 +1338,19 @@
               ПРОЦЕСС
             </span>
 
+
             <h2>
+
               От идеи
-              <span>до готового сайта.</span>
+
+              <span>
+                до готового сайта.
+              </span>
+
             </h2>
 
           </div>
+
 
         </div>
 
@@ -879,9 +1360,11 @@
 
           <article class="process-step">
 
+
             <div class="process-index">
               01
             </div>
+
 
             <div class="process-content">
 
@@ -890,25 +1373,31 @@
               </h3>
 
               <p>
+
                 Вы рассказываете, чем занимаетесь,
                 что нужно показать клиенту
                 и какие контакты должны быть.
+
               </p>
 
             </div>
 
+
             <div class="process-arrow">
               ↗
             </div>
+
 
           </article>
 
 
           <article class="process-step">
 
+
             <div class="process-index">
               02
             </div>
+
 
             <div class="process-content">
 
@@ -917,24 +1406,30 @@
               </h3>
 
               <p>
+
                 Определяем порядок блоков,
                 преимущества и призывы к действию.
+
               </p>
 
             </div>
 
+
             <div class="process-arrow">
               ↗
             </div>
+
 
           </article>
 
 
           <article class="process-step">
 
+
             <div class="process-index">
               03
             </div>
+
 
             <div class="process-content">
 
@@ -943,43 +1438,207 @@
               </h3>
 
               <p>
+
                 Переводим структуру
                 в готовый интерфейс.
+
               </p>
 
             </div>
 
+
             <div class="process-arrow">
               ↗
             </div>
+
 
           </article>
 
 
           <article class="process-step">
 
+
             <div class="process-index">
               04
             </div>
 
+
             <div class="process-content">
 
               <h3>
-                Проверяем и публикуем
+                Проверяем и показываем готовый сайт
               </h3>
 
               <p>
-                Проверяем отображение
-                и размещаем готовый сайт.
+
+                Проверяем отображение,
+                исправляем согласованные недочёты
+                и показываем полностью готовый результат.
+
               </p>
 
             </div>
+
 
             <div class="process-arrow">
               ↗
             </div>
 
+
           </article>
+
+
+          <article class="process-step process-payment-step">
+
+
+            <div class="process-index">
+              05
+            </div>
+
+
+            <div class="process-content">
+
+              <h3>
+                Оплата после готовности
+              </h3>
+
+              <p>
+
+                Оплата производится после того,
+                как сайт полностью сделан,
+                проверен и готов к передаче клиенту.
+
+              </p>
+
+            </div>
+
+
+            <div class="process-arrow">
+              ✓
+            </div>
+
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         PAYMENT
+    ==================================================== -->
+
+    <section
+      class="payment-section"
+      id="payment"
+    >
+
+      <div class="container">
+
+
+        <div class="payment-card">
+
+
+          <div class="payment-icon">
+            ✓
+          </div>
+
+
+          <div class="payment-content">
+
+            <span class="section-kicker">
+              УСЛОВИЯ ОПЛАТЫ
+            </span>
+
+
+            <h2>
+
+              Сначала
+
+              <span>
+                готовый сайт.
+              </span>
+
+            </h2>
+
+
+            <p>
+
+              Вы не оплачиваете работу просто за обсуждение
+              или согласование идеи.
+
+              Сначала сайт создаётся полностью:
+              дизайн, вёрстка, адаптация и необходимые блоки.
+
+              После завершения работы и проверки готового результата
+              производится оплата.
+
+            </p>
+
+
+            <div class="payment-points">
+
+
+              <div>
+
+                <strong>
+                  01
+                </strong>
+
+                <span>
+                  Обсуждаем задачу
+                </span>
+
+              </div>
+
+
+              <div>
+
+                <strong>
+                  02
+                </strong>
+
+                <span>
+                  Создаём сайт
+                </span>
+
+              </div>
+
+
+              <div>
+
+                <strong>
+                  03
+                </strong>
+
+                <span>
+                  Проверяем результат
+                </span>
+
+              </div>
+
+
+              <div>
+
+                <strong>
+                  04
+                </strong>
+
+                <span>
+                  После готовности — оплата
+                </span>
+
+              </div>
+
+
+            </div>
+
+
+          </div>
 
 
         </div>
@@ -997,6 +1656,7 @@
 
       <div class="container">
 
+
         <div class="offer-card">
 
 
@@ -1007,19 +1667,30 @@
 
           <div class="offer-content">
 
+
             <span class="section-kicker">
               СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ
             </span>
 
+
             <h2>
+
               Через Авито —
-              <span>900 ₽</span>
+
+              <span>
+                900 ₽
+              </span>
+
             </h2>
 
+
             <p>
+
               Для одноэкранного сайта действует
               скидка 10 % при заказе через Авито.
+
             </p>
+
 
             <a
               href="https://www.avito.ru/"
@@ -1027,23 +1698,43 @@
               target="_blank"
               rel="noopener noreferrer"
             >
+
               Открыть Авито →
+
             </a>
+
 
           </div>
 
 
           <div class="offer-side">
 
-            <div>
-              <span>Обычная цена</span>
-              <strong>1000 ₽</strong>
-            </div>
 
             <div>
-              <span>Через Авито</span>
-              <strong>900 ₽</strong>
+
+              <span>
+                Обычная цена
+              </span>
+
+              <strong>
+                1000 ₽
+              </strong>
+
             </div>
+
+
+            <div>
+
+              <span>
+                Через Авито
+              </span>
+
+              <strong>
+                900 ₽
+              </strong>
+
+            </div>
+
 
           </div>
 
@@ -1059,15 +1750,21 @@
          FAQ
     ==================================================== -->
 
-    <section class="section faq-section">
+    <section
+      class="section faq-section"
+      id="faq"
+    >
 
       <div class="container">
 
+
         <div class="section-heading">
+
 
           <div class="section-number">
             05
           </div>
+
 
           <div>
 
@@ -1075,11 +1772,13 @@
               FAQ
             </span>
 
+
             <h2>
               Остались вопросы?
             </h2>
 
           </div>
+
 
         </div>
 
@@ -1088,68 +1787,143 @@
 
 
           <details>
+
             <summary>
+
               Что нужно предоставить?
-              <span>+</span>
+
+              <span>
+                +
+              </span>
+
             </summary>
 
+
             <div class="faq-answer">
+
               Информация об услуге, контакты,
               фотографии или логотип, если они есть.
+
             </div>
+
           </details>
 
 
           <details>
+
             <summary>
+
               Можно ли изменить дизайн?
-              <span>+</span>
+
+              <span>
+                +
+              </span>
+
             </summary>
 
+
             <div class="faq-answer">
+
               Да. Цвета, блоки, текст,
               изображения и визуальное направление
               можно адаптировать под проект.
+
             </div>
+
           </details>
 
 
           <details>
+
             <summary>
+
               Сайт будет работать на телефоне?
-              <span>+</span>
+
+              <span>
+                +
+              </span>
+
             </summary>
 
+
             <div class="faq-answer">
+
               Да. Сайт создаётся с адаптацией
               под мобильные устройства и большие экраны.
+
             </div>
+
           </details>
 
 
           <details>
+
             <summary>
+
               Можно ли подключить свой домен?
-              <span>+</span>
+
+              <span>
+                +
+              </span>
+
             </summary>
 
+
             <div class="faq-answer">
+
               Да. После публикации можно подключить
               собственный домен.
+
             </div>
+
           </details>
 
 
           <details>
+
             <summary>
+
               Можно ли потом расширить сайт?
-              <span>+</span>
+
+              <span>
+                +
+              </span>
+
             </summary>
 
+
             <div class="faq-answer">
+
               Да. Можно добавлять новые страницы,
               блоки, формы, галерею, карту и другие функции.
+
             </div>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+
+              Когда происходит оплата?
+
+              <span>
+                +
+              </span>
+
+            </summary>
+
+
+            <div class="faq-answer">
+
+              Оплата производится после полной готовности
+              сайта. Сначала выполняется работа,
+              затем готовый результат проверяется,
+              после чего производится оплата.
+
+            </div>
+
           </details>
 
 
@@ -1168,25 +1942,40 @@
 
       <div class="container">
 
+
         <div class="final-card">
+
 
           <div class="final-orbit"></div>
 
 
           <div class="final-content">
 
+
             <span class="section-kicker">
               ГОТОВЫ НАЧАТЬ?
             </span>
 
+
             <h2>
+
               Давайте сделаем
-              <span>ваш сайт.</span>
+
+              <span>
+                ваш сайт.
+              </span>
+
             </h2>
 
+
             <p>
+
               Напишите, чем вы занимаетесь,
               и обсудим подходящий формат проекта.
+
+              Работа выполняется до полной готовности,
+              после чего производится оплата.
+
             </p>
 
 
@@ -1194,16 +1983,29 @@
               href="./order.html"
               class="button button-primary button-large"
             >
-              <span>Обсудить проект</span>
-              <b>↗</b>
+
+              <span>
+                Обсудить проект
+              </span>
+
+              <b>
+                ↗
+              </b>
+
             </a>
+
 
           </div>
 
 
           <div class="final-mark">
-            <span>R</span>
+
+            <span>
+              R
+            </span>
+
           </div>
+
 
         </div>
 
@@ -1226,14 +2028,22 @@
 
         <div>
 
+
           <span class="section-kicker">
             СВЯЗЬ
           </span>
 
+
           <h2>
+
             Один клик
-            <span>до разговора.</span>
+
+            <span>
+              до разговора.
+            </span>
+
           </h2>
+
 
         </div>
 
@@ -1245,8 +2055,15 @@
             href="tel:+79996362202"
             class="contact-link"
           >
-            <span>Телефон</span>
-            <strong>+7 999 636-22-02</strong>
+
+            <span>
+              Телефон
+            </span>
+
+            <strong>
+              +7 999 636-22-02
+            </strong>
+
           </a>
 
 
@@ -1254,8 +2071,15 @@
             href="mailto:79996362202@ya.ru"
             class="contact-link"
           >
-            <span>Email</span>
-            <strong>79996362202@ya.ru</strong>
+
+            <span>
+              Email
+            </span>
+
+            <strong>
+              79996362202@ya.ru
+            </strong>
+
           </a>
 
 
@@ -1265,8 +2089,15 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span>Telegram</span>
-            <strong>Написать →</strong>
+
+            <span>
+              Telegram
+            </span>
+
+            <strong>
+              Написать →
+            </strong>
+
           </a>
 
 
@@ -1276,8 +2107,15 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span>WhatsApp</span>
-            <strong>Написать →</strong>
+
+            <span>
+              WhatsApp
+            </span>
+
+            <strong>
+              Написать →
+            </strong>
+
           </a>
 
 
@@ -1297,12 +2135,15 @@
 
   <footer class="site-footer">
 
+
     <div class="container">
+
 
       <div class="footer-main">
 
 
         <div class="footer-brand">
+
 
           <a
             href="#top"
@@ -1313,27 +2154,54 @@
               R
             </span>
 
+
             <span class="brand-text">
-              <strong>ROMAN</strong>
-              <small>DIGITAL</small>
+
+              <strong>
+                ROMAN
+              </strong>
+
+              <small>
+                DIGITAL
+              </small>
+
             </span>
 
           </a>
 
+
           <p>
+
             Современные сайты
             для реальных задач.
+
           </p>
+
 
         </div>
 
 
         <nav class="footer-nav">
 
-          <a href="#about">Подход</a>
-          <a href="#services">Возможности</a>
-          <a href="#prices">Цены</a>
-          <a href="#process">Процесс</a>
+          <a href="#about">
+            Подход
+          </a>
+
+          <a href="#services">
+            Возможности
+          </a>
+
+          <a href="#prices">
+            Цены
+          </a>
+
+          <a href="#process">
+            Процесс
+          </a>
+
+          <a href="#payment">
+            Оплата
+          </a>
 
         </nav>
 
@@ -1356,24 +2224,307 @@
 
       <div class="footer-bottom">
 
+
         <span>
           © 2026 ROMAN DIGITAL
         </span>
+
 
         <span>
           Краснодар · Россия
         </span>
 
+
         <a href="#top">
           Наверх ↑
         </a>
 
+
       </div>
+
 
     </div>
 
   </footer>
 
 
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+
+      /* ===================================================
+         THEME SWITCH
+      ==================================================== */
+
+      const themeToggle =
+        document.getElementById("themeToggle");
+
+      const html =
+        document.documentElement;
+
+      const themeColor =
+        document.getElementById("theme-color");
+
+
+      function updateThemeButton() {
+
+        const currentTheme =
+          html.getAttribute("data-theme");
+
+        const isLight =
+          currentTheme === "light";
+
+
+        themeToggle.setAttribute(
+          "aria-pressed",
+          isLight ? "true" : "false"
+        );
+
+
+        themeToggle.setAttribute(
+          "aria-label",
+          isLight
+            ? "Переключить на тёмную тему"
+            : "Переключить на светлую тему"
+        );
+
+
+        if (themeColor) {
+
+          themeColor.setAttribute(
+            "content",
+            isLight
+              ? "#f5f7fa"
+              : "#07090d"
+          );
+
+        }
+
+      }
+
+
+      updateThemeButton();
+
+
+      themeToggle.addEventListener(
+        "click",
+        function () {
+
+          const currentTheme =
+            html.getAttribute("data-theme");
+
+
+          const nextTheme =
+            currentTheme === "light"
+              ? "dark"
+              : "light";
+
+
+          html.setAttribute(
+            "data-theme",
+            nextTheme
+          );
+
+
+          localStorage.setItem(
+            "roman-theme",
+            nextTheme
+          );
+
+
+          updateThemeButton();
+
+        }
+      );
+
+
+      /* ===================================================
+         HEADER SCROLL
+      ==================================================== */
+
+      const header =
+        document.querySelector(".site-header");
+
+
+      function updateHeader() {
+
+        if (window.scrollY > 20) {
+
+          header.classList.add(
+            "header-scrolled"
+          );
+
+        } else {
+
+          header.classList.remove(
+            "header-scrolled"
+          );
+
+        }
+
+      }
+
+
+      updateHeader();
+
+
+      window.addEventListener(
+        "scroll",
+        updateHeader,
+        { passive: true }
+      );
+
+
+      /* ===================================================
+         MOUSE LIGHT
+      ==================================================== */
+
+      document.addEventListener(
+        "pointermove",
+        function (event) {
+
+          document.documentElement.style.setProperty(
+            "--mouse-x",
+            event.clientX + "px"
+          );
+
+          document.documentElement.style.setProperty(
+            "--mouse-y",
+            event.clientY + "px"
+          );
+
+        },
+        { passive: true }
+      );
+
+
+      /* ===================================================
+         SMOOTH ANCHOR
+      ==================================================== */
+
+      document.querySelectorAll(
+        'a[href^="#"]'
+      ).forEach(function (link) {
+
+        link.addEventListener(
+          "click",
+          function (event) {
+
+            const targetId =
+              this.getAttribute("href");
+
+
+            if (
+              !targetId ||
+              targetId === "#"
+            ) {
+              return;
+            }
+
+
+            const target =
+              document.querySelector(targetId);
+
+
+            if (!target) {
+              return;
+            }
+
+
+            event.preventDefault();
+
+
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+
+          }
+        );
+
+      });
+
+
+      /* ===================================================
+         REVEAL ANIMATION
+      ==================================================== */
+
+      const revealElements =
+        document.querySelectorAll(
+          ".section, .service-card, .price-card, .process-step, .contact-link, .showcase-frame"
+        );
+
+
+      if (
+        "IntersectionObserver" in window &&
+        !window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches
+      ) {
+
+        const observer =
+          new IntersectionObserver(
+            function (entries) {
+
+              entries.forEach(
+                function (entry) {
+
+                  if (
+                    entry.isIntersecting
+                  ) {
+
+                    entry.target.classList.add(
+                      "is-visible"
+                    );
+
+                    observer.unobserve(
+                      entry.target
+                    );
+
+                  }
+
+                }
+              );
+
+            },
+            {
+              threshold: 0.08
+            }
+          );
+
+
+        revealElements.forEach(
+          function (element) {
+
+            observer.observe(element);
+
+          }
+        );
+
+      } else {
+
+        revealElements.forEach(
+          function (element) {
+
+            element.classList.add(
+              "is-visible"
+            );
+
+          }
+        );
+
+      }
+
+
+    });
+
+  </script>
+
+
 </body>
-</html> 
+</html>
