@@ -16,26 +16,27 @@
 
   <meta
     name="description"
-    content="ROMAN DIGITAL — создание современных сайтов и лендингов от 1000 ₽. Чистый HTML, CSS и JavaScript, адаптивный дизайн и запуск под ключ."
+    content="ROMAN DIGITAL — создание современных сайтов и лендингов. Чистый HTML, CSS и JavaScript, адаптивный дизайн и оплата после выполнения работы."
   >
 
-  <title>ROMAN DIGITAL — Создание сайтов от 1000 ₽</title>
+  <title>ROMAN DIGITAL — Создание сайтов</title>
 
   <link
     rel="canonical"
     href="https://evacuatorkrasnodar-ux.github.io/sites-900/"
   >
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
 
   <meta
     property="og:title"
-    content="ROMAN DIGITAL — создание сайтов от 1000 ₽"
+    content="ROMAN DIGITAL — создание сайтов"
   >
 
   <meta
     property="og:description"
-    content="Современные сайты и лендинги на чистом HTML, CSS и JavaScript."
+    content="Современные сайты и лендинги. Оплата после выполнения работы."
   >
 
   <meta
@@ -43,6 +44,7 @@
     content="https://evacuatorkrasnodar-ux.github.io/sites-900/"
   >
 
+  <!-- Шрифт -->
   <link
     rel="preconnect"
     href="https://fonts.googleapis.com"
@@ -59,31 +61,29 @@
     rel="stylesheet"
   >
 
+  <!-- CSS -->
   <link
     rel="stylesheet"
     href="./style.css"
   >
 
   <!-- =====================================================
-       ТЕМА
-  ====================================================== -->
+       ПРИМЕНЯЕМ ТЕМУ ДО ЗАГРУЗКИ СТРАНИЦЫ
+       ===================================================== -->
 
   <script>
     (function () {
       const savedTheme = localStorage.getItem("roman-theme");
 
       if (savedTheme === "light") {
-        document.documentElement.setAttribute("data-theme", "light");
+        document.documentElement.classList.add("light-theme");
       } else {
-        document.documentElement.setAttribute("data-theme", "dark");
+        document.documentElement.classList.add("dark-theme");
       }
     })();
   </script>
 
-  <!-- =====================================================
-       SEO
-  ====================================================== -->
-
+  <!-- SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -96,9 +96,7 @@
     "url": "https://evacuatorkrasnodar-ux.github.io/sites-900/"
   }
   </script>
-
 </head>
-
 
 <body>
 
@@ -107,13 +105,11 @@
   ====================================================== -->
 
   <div class="site-background" aria-hidden="true">
-
     <div class="bg-grid"></div>
 
     <div class="bg-glow bg-glow-one"></div>
     <div class="bg-glow bg-glow-two"></div>
     <div class="bg-glow bg-glow-three"></div>
-
   </div>
 
 
@@ -125,9 +121,10 @@
 
     <div class="container header-inner">
 
+      <!-- ЛОГО -->
 
       <a
-        href="./index.html"
+        href="#top"
         class="brand"
         aria-label="ROMAN DIGITAL — главная"
       >
@@ -137,19 +134,14 @@
         </span>
 
         <span class="brand-text">
-
-          <strong>
-            ROMAN
-          </strong>
-
-          <small>
-            DIGITAL
-          </small>
-
+          <strong>ROMAN</strong>
+          <small>DIGITAL</small>
         </span>
 
       </a>
 
+
+      <!-- НАВИГАЦИЯ -->
 
       <nav
         class="main-nav"
@@ -172,58 +164,50 @@
           Процесс
         </a>
 
-        <a href="#payment">
-          Оплата
-        </a>
-
       </nav>
 
 
-      <div class="header-actions">
+      <!-- ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ -->
 
-        <!-- ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ -->
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Переключить тему"
+        aria-pressed="false"
+      >
 
-        <button
-          class="theme-toggle"
-          id="themeToggle"
-          type="button"
-          aria-label="Переключить тему"
-          aria-pressed="false"
-        >
+        <span class="theme-icon theme-sun">
+          ☀
+        </span>
 
-          <span class="theme-icon theme-sun">
-            ☀
-          </span>
+        <span class="theme-icon theme-moon">
+          ☾
+        </span>
 
-          <span class="theme-toggle-track">
+        <span class="theme-toggle-text">
+          Тема
+        </span>
 
-            <span class="theme-toggle-thumb"></span>
-
-          </span>
-
-          <span class="theme-icon theme-moon">
-            ☾
-          </span>
-
-        </button>
+      </button>
 
 
-        <a
-          href="./order.html"
-          class="header-order"
-        >
+      <!-- ЗАКАЗ -->
 
-          <span>
-            Заказать
-          </span>
+      <a
+        href="./order.html"
+        class="header-order"
+      >
 
-          <b>
-            →
-          </b>
+        <span>
+          Заказать
+        </span>
 
-        </a>
+        <b>
+          →
+        </b>
 
-      </div>
+      </a>
 
     </div>
 
@@ -246,8 +230,9 @@
       <div class="container hero-container">
 
 
-        <div class="hero-content">
+        <!-- ТЕКСТ -->
 
+        <div class="hero-content">
 
           <div class="eyebrow">
 
@@ -261,14 +246,8 @@
           <h1>
 
             Сайт,
-
-            <span>
-              который
-            </span>
-
-            <em>
-              запоминают.
-            </em>
+            <span>который</span>
+            <em>запоминают.</em>
 
           </h1>
 
@@ -277,6 +256,7 @@
 
             Современные сайты и лендинги
             для мастеров, услуг и небольшого бизнеса.
+
             От идеи до готовой страницы —
             без лишнего.
 
@@ -284,7 +264,6 @@
 
 
           <div class="hero-actions">
-
 
             <a
               href="./order.html"
@@ -311,6 +290,28 @@
 
             </a>
 
+          </div>
+
+
+          <!-- ОПЛАТА ПОСЛЕ -->
+
+          <div class="hero-payment-note">
+
+            <span class="payment-check">
+              ✓
+            </span>
+
+            <div>
+
+              <strong>
+                Оплата после выполнения работы
+              </strong>
+
+              <small>
+                Сначала готовый сайт — затем оплата.
+              </small>
+
+            </div>
 
           </div>
 
@@ -319,20 +320,18 @@
 
             <span class="status-dot"></span>
 
-            Оплата после полной готовности сайта
+            Принимаю новые проекты
 
           </div>
-
 
         </div>
 
 
         <!-- =================================================
-             HERO VISUAL
+             ВИЗУАЛЬНАЯ КАРТОЧКА
         ================================================== -->
 
         <div class="hero-visual">
-
 
           <div class="visual-orbit orbit-one"></div>
 
@@ -356,7 +355,6 @@
 
 
             <div class="visual-main">
-
 
               <div class="visual-kicker">
                 DIGITAL PRESENCE
@@ -409,15 +407,26 @@
                 <div>
 
                   <strong>
-                    24/7
+                    100%
                   </strong>
 
                   <span>
-                    онлайн
+                    готовность
                   </span>
 
                 </div>
 
+
+              </div>
+
+
+              <div class="visual-payment">
+
+                <span>
+                  ✓
+                </span>
+
+                Оплата после выполнения
 
               </div>
 
@@ -436,9 +445,10 @@
 
             </div>
 
-
           </div>
 
+
+          <!-- ПЛАВАЮЩАЯ ЦЕНА -->
 
           <div class="floating-badge badge-price">
 
@@ -453,6 +463,8 @@
           </div>
 
 
+          <!-- ПЛАВАЮЩИЙ КОД -->
+
           <div class="floating-badge badge-code">
 
             <span>
@@ -463,6 +475,18 @@
 
           </div>
 
+
+          <!-- ПЛАТА ПОСЛЕ -->
+
+          <div class="floating-badge badge-payment">
+
+            <span>
+              ✓
+            </span>
+
+            Оплата после
+
+          </div>
 
         </div>
 
@@ -481,7 +505,7 @@
 
 
     <!-- ===================================================
-         TRUST
+         TRUST BAR
     ==================================================== -->
 
     <section class="trust-bar">
@@ -548,7 +572,7 @@
           </strong>
 
           <span>
-            Оплата после готовности
+            Под вашу задачу
           </span>
 
         </div>
@@ -573,7 +597,6 @@
 
         <div class="section-heading">
 
-
           <div class="section-number">
             01
           </div>
@@ -584,7 +607,6 @@
             <span class="section-kicker">
               ПОДХОД
             </span>
-
 
             <h2>
 
@@ -598,7 +620,6 @@
 
           </div>
 
-
         </div>
 
 
@@ -606,7 +627,6 @@
 
 
           <div class="about-lead">
-
 
             <p class="large-text">
 
@@ -621,12 +641,37 @@
 
             <p>
 
-              Структура, содержание, визуальные акценты
-              и мобильная версия продумываются
-              под конкретную задачу.
+              Структура, содержание,
+              визуальные акценты
+              и мобильная версия
+              продумываются под конкретную задачу.
 
             </p>
 
+
+            <!-- БЛОК ОПЛАТЫ -->
+
+            <div class="payment-box">
+
+              <div class="payment-box-icon">
+                ✓
+              </div>
+
+              <div>
+
+                <strong>
+                  Оплата после выполнения
+                </strong>
+
+                <p>
+                  Сайт сначала создаётся
+                  и демонстрируется заказчику.
+                  Оплата производится после выполнения работы.
+                </p>
+
+              </div>
+
+            </div>
 
           </div>
 
@@ -729,7 +774,6 @@
 
         <div class="section-heading">
 
-
           <div class="section-number">
             02
           </div>
@@ -740,7 +784,6 @@
             <span class="section-kicker">
               ВОЗМОЖНОСТИ
             </span>
-
 
             <h2>
 
@@ -753,7 +796,6 @@
             </h2>
 
           </div>
-
 
         </div>
 
@@ -937,7 +979,6 @@
 
         <div class="showcase-copy">
 
-
           <span class="section-kicker">
             ПРИНЦИП
           </span>
@@ -976,12 +1017,10 @@
 
           </a>
 
-
         </div>
 
 
         <div class="showcase-visual">
-
 
           <div class="showcase-frame">
 
@@ -1005,25 +1044,25 @@
                 YOUR BUSINESS
               </small>
 
+
               <strong>
 
                 Ваша услуга.
                 <br>
+
                 Понятно.
                 <br>
+
                 Уверенно.
 
               </strong>
 
 
               <div class="frame-button">
-
                 Узнать подробнее →
-
               </div>
 
             </div>
-
 
           </div>
 
@@ -1048,7 +1087,6 @@
 
         <div class="section-heading">
 
-
           <div class="section-number">
             03
           </div>
@@ -1059,7 +1097,6 @@
             <span class="section-kicker">
               СТОИМОСТЬ
             </span>
-
 
             <h2>
 
@@ -1073,15 +1110,15 @@
 
           </div>
 
-
         </div>
 
 
         <div class="pricing-grid">
 
 
-          <article class="price-card">
+          <!-- START -->
 
+          <article class="price-card">
 
             <div class="price-top">
 
@@ -1102,10 +1139,8 @@
 
 
             <p>
-
               Для простой услуги,
               мастера или быстрого старта.
-
             </p>
 
 
@@ -1135,16 +1170,26 @@
             </ul>
 
 
+            <div class="payment-after">
+
+              ✓ Оплата после выполнения
+
+            </div>
+
+
             <a
               href="./order.html"
               class="price-button"
             >
-              Выбрать →
-            </a>
 
+              Выбрать →
+
+            </a>
 
           </article>
 
+
+          <!-- BUSINESS -->
 
           <article class="price-card price-featured">
 
@@ -1173,10 +1218,8 @@
 
 
             <p>
-
               Для бизнеса, услуги или
               полноценного представления.
-
             </p>
 
 
@@ -1210,19 +1253,28 @@
             </ul>
 
 
+            <div class="payment-after">
+
+              ✓ Оплата после выполнения
+
+            </div>
+
+
             <a
               href="./order.html"
               class="price-button"
             >
-              Выбрать →
-            </a>
 
+              Выбрать →
+
+            </a>
 
           </article>
 
 
-          <article class="price-card">
+          <!-- PRO -->
 
+          <article class="price-card">
 
             <div class="price-top">
 
@@ -1243,10 +1295,8 @@
 
 
             <p>
-
               Для проекта, которому
               нужно больше пространства.
-
             </p>
 
 
@@ -1280,13 +1330,21 @@
             </ul>
 
 
+            <div class="payment-after">
+
+              ✓ Оплата после выполнения
+
+            </div>
+
+
             <a
               href="./order.html"
               class="price-button"
             >
-              Обсудить →
-            </a>
 
+              Обсудить →
+
+            </a>
 
           </article>
 
@@ -1300,12 +1358,38 @@
             *
           </span>
 
-          Итоговая стоимость зависит от состава
-          и объёма проекта. Дополнительные функции
+          Итоговая стоимость зависит
+          от состава и объёма проекта.
+          Дополнительные функции
           согласовываются заранее.
 
         </div>
 
+
+        <!-- ВАЖНЫЙ БЛОК -->
+
+        <div class="payment-policy">
+
+          <div class="payment-policy-icon">
+            ✓
+          </div>
+
+
+          <div>
+
+            <strong>
+              Оплата после выполнения работы
+            </strong>
+
+            <p>
+              Вы сначала получаете готовый результат
+              и можете проверить сайт.
+              После выполнения работы производится оплата.
+            </p>
+
+          </div>
+
+        </div>
 
       </div>
 
@@ -1326,7 +1410,6 @@
 
         <div class="section-heading">
 
-
           <div class="section-number">
             04
           </div>
@@ -1337,7 +1420,6 @@
             <span class="section-kicker">
               ПРОЦЕСС
             </span>
-
 
             <h2>
 
@@ -1351,7 +1433,6 @@
 
           </div>
 
-
         </div>
 
 
@@ -1359,7 +1440,6 @@
 
 
           <article class="process-step">
-
 
             <div class="process-index">
               01
@@ -1373,11 +1453,10 @@
               </h3>
 
               <p>
-
-                Вы рассказываете, чем занимаетесь,
+                Вы рассказываете,
+                чем занимаетесь,
                 что нужно показать клиенту
                 и какие контакты должны быть.
-
               </p>
 
             </div>
@@ -1387,12 +1466,10 @@
               ↗
             </div>
 
-
           </article>
 
 
           <article class="process-step">
-
 
             <div class="process-index">
               02
@@ -1406,10 +1483,9 @@
               </h3>
 
               <p>
-
                 Определяем порядок блоков,
-                преимущества и призывы к действию.
-
+                преимущества и призывы
+                к действию.
               </p>
 
             </div>
@@ -1419,12 +1495,10 @@
               ↗
             </div>
 
-
           </article>
 
 
           <article class="process-step">
-
 
             <div class="process-index">
               03
@@ -1438,10 +1512,8 @@
               </h3>
 
               <p>
-
                 Переводим структуру
                 в готовый интерфейс.
-
               </p>
 
             </div>
@@ -1451,12 +1523,10 @@
               ↗
             </div>
 
-
           </article>
 
 
           <article class="process-step">
-
 
             <div class="process-index">
               04
@@ -1466,15 +1536,12 @@
             <div class="process-content">
 
               <h3>
-                Проверяем и показываем готовый сайт
+                Проверяем и публикуем
               </h3>
 
               <p>
-
-                Проверяем отображение,
-                исправляем согласованные недочёты
-                и показываем полностью готовый результат.
-
+                Проверяем отображение
+                и размещаем готовый сайт.
               </p>
 
             </div>
@@ -1484,12 +1551,10 @@
               ↗
             </div>
 
-
           </article>
 
 
           <article class="process-step process-payment-step">
-
 
             <div class="process-index">
               05
@@ -1499,15 +1564,13 @@
             <div class="process-content">
 
               <h3>
-                Оплата после готовности
+                Оплата после выполнения
               </h3>
 
               <p>
-
-                Оплата производится после того,
-                как сайт полностью сделан,
-                проверен и готов к передаче клиенту.
-
+                После того как работа выполнена
+                и готовый сайт предоставлен,
+                производится оплата.
               </p>
 
             </div>
@@ -1517,128 +1580,7 @@
               ✓
             </div>
 
-
           </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ===================================================
-         PAYMENT
-    ==================================================== -->
-
-    <section
-      class="payment-section"
-      id="payment"
-    >
-
-      <div class="container">
-
-
-        <div class="payment-card">
-
-
-          <div class="payment-icon">
-            ✓
-          </div>
-
-
-          <div class="payment-content">
-
-            <span class="section-kicker">
-              УСЛОВИЯ ОПЛАТЫ
-            </span>
-
-
-            <h2>
-
-              Сначала
-
-              <span>
-                готовый сайт.
-              </span>
-
-            </h2>
-
-
-            <p>
-
-              Вы не оплачиваете работу просто за обсуждение
-              или согласование идеи.
-
-              Сначала сайт создаётся полностью:
-              дизайн, вёрстка, адаптация и необходимые блоки.
-
-              После завершения работы и проверки готового результата
-              производится оплата.
-
-            </p>
-
-
-            <div class="payment-points">
-
-
-              <div>
-
-                <strong>
-                  01
-                </strong>
-
-                <span>
-                  Обсуждаем задачу
-                </span>
-
-              </div>
-
-
-              <div>
-
-                <strong>
-                  02
-                </strong>
-
-                <span>
-                  Создаём сайт
-                </span>
-
-              </div>
-
-
-              <div>
-
-                <strong>
-                  03
-                </strong>
-
-                <span>
-                  Проверяем результат
-                </span>
-
-              </div>
-
-
-              <div>
-
-                <strong>
-                  04
-                </strong>
-
-                <span>
-                  После готовности — оплата
-                </span>
-
-              </div>
-
-
-            </div>
-
-
-          </div>
 
 
         </div>
@@ -1656,7 +1598,6 @@
 
       <div class="container">
 
-
         <div class="offer-card">
 
 
@@ -1666,7 +1607,6 @@
 
 
           <div class="offer-content">
-
 
             <span class="section-kicker">
               СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ
@@ -1703,7 +1643,6 @@
 
             </a>
 
-
           </div>
 
 
@@ -1738,7 +1677,6 @@
 
           </div>
 
-
         </div>
 
       </div>
@@ -1750,16 +1688,12 @@
          FAQ
     ==================================================== -->
 
-    <section
-      class="section faq-section"
-      id="faq"
-    >
+    <section class="section faq-section">
 
       <div class="container">
 
 
         <div class="section-heading">
-
 
           <div class="section-number">
             05
@@ -1772,13 +1706,11 @@
               FAQ
             </span>
 
-
             <h2>
               Остались вопросы?
             </h2>
 
           </div>
-
 
         </div>
 
@@ -1801,8 +1733,9 @@
 
             <div class="faq-answer">
 
-              Информация об услуге, контакты,
-              фотографии или логотип, если они есть.
+              Информация об услуге,
+              контакты, фотографии
+              или логотип, если они есть.
 
             </div>
 
@@ -1849,7 +1782,8 @@
             <div class="faq-answer">
 
               Да. Сайт создаётся с адаптацией
-              под мобильные устройства и большие экраны.
+              под мобильные устройства
+              и большие экраны.
 
             </div>
 
@@ -1871,8 +1805,8 @@
 
             <div class="faq-answer">
 
-              Да. После публикации можно подключить
-              собственный домен.
+              Да. После публикации можно
+              подключить собственный домен.
 
             </div>
 
@@ -1895,7 +1829,8 @@
             <div class="faq-answer">
 
               Да. Можно добавлять новые страницы,
-              блоки, формы, галерею, карту и другие функции.
+              блоки, формы, галерею,
+              карту и другие функции.
 
             </div>
 
@@ -1906,7 +1841,7 @@
 
             <summary>
 
-              Когда происходит оплата?
+              Когда производится оплата?
 
               <span>
                 +
@@ -1917,10 +1852,33 @@
 
             <div class="faq-answer">
 
-              Оплата производится после полной готовности
-              сайта. Сначала выполняется работа,
-              затем готовый результат проверяется,
-              после чего производится оплата.
+              Оплата производится
+              после выполнения работы.
+              Сначала создаётся готовый сайт,
+              затем производится оплата.
+
+            </div>
+
+          </details>
+
+
+          <details>
+
+            <summary>
+
+              Нужна ли предоплата?
+
+              <span>
+                +
+              </span>
+
+            </summary>
+
+
+            <div class="faq-answer">
+
+              В условиях данного предложения
+              указано: оплата после выполнения работы.
 
             </div>
 
@@ -1942,7 +1900,6 @@
 
       <div class="container">
 
-
         <div class="final-card">
 
 
@@ -1950,7 +1907,6 @@
 
 
           <div class="final-content">
-
 
             <span class="section-kicker">
               ГОТОВЫ НАЧАТЬ?
@@ -1973,10 +1929,22 @@
               Напишите, чем вы занимаетесь,
               и обсудим подходящий формат проекта.
 
-              Работа выполняется до полной готовности,
-              после чего производится оплата.
-
             </p>
+
+
+            <!-- ОПЛАТА -->
+
+            <div class="final-payment">
+
+              <span>
+                ✓
+              </span>
+
+              <strong>
+                Оплата после выполнения работы
+              </strong>
+
+            </div>
 
 
             <a
@@ -1994,7 +1962,6 @@
 
             </a>
 
-
           </div>
 
 
@@ -2005,7 +1972,6 @@
             </span>
 
           </div>
-
 
         </div>
 
@@ -2028,7 +1994,6 @@
 
         <div>
 
-
           <span class="section-kicker">
             СВЯЗЬ
           </span>
@@ -2043,7 +2008,6 @@
             </span>
 
           </h2>
-
 
         </div>
 
@@ -2135,7 +2099,6 @@
 
   <footer class="site-footer">
 
-
     <div class="container">
 
 
@@ -2171,12 +2134,16 @@
 
 
           <p>
-
             Современные сайты
             для реальных задач.
-
           </p>
 
+
+          <div class="footer-payment">
+
+            ✓ Оплата после выполнения
+
+          </div>
 
         </div>
 
@@ -2199,8 +2166,8 @@
             Процесс
           </a>
 
-          <a href="#payment">
-            Оплата
+          <a href="#contacts">
+            Контакты
           </a>
 
         </nav>
@@ -2242,7 +2209,6 @@
 
       </div>
 
-
     </div>
 
   </footer>
@@ -2250,276 +2216,165 @@
 
   <!-- =====================================================
        JAVASCRIPT
+       ПЕРЕКЛЮЧЕНИЕ ТЕМЫ
   ====================================================== -->
 
   <script>
 
-    document.addEventListener("DOMContentLoaded", function () {
+    const themeToggle =
+      document.getElementById("themeToggle");
+
+    const themeColor =
+      document.getElementById("theme-color");
 
 
-      /* ===================================================
-         THEME SWITCH
-      ==================================================== */
+    function updateThemeButton() {
 
-      const themeToggle =
-        document.getElementById("themeToggle");
-
-      const html =
-        document.documentElement;
-
-      const themeColor =
-        document.getElementById("theme-color");
-
-
-      function updateThemeButton() {
-
-        const currentTheme =
-          html.getAttribute("data-theme");
-
-        const isLight =
-          currentTheme === "light";
-
-
-        themeToggle.setAttribute(
-          "aria-pressed",
-          isLight ? "true" : "false"
+      const isLight =
+        document.documentElement.classList.contains(
+          "light-theme"
         );
 
+
+      themeToggle.setAttribute(
+        "aria-pressed",
+        isLight ? "true" : "false"
+      );
+
+
+      if (isLight) {
 
         themeToggle.setAttribute(
           "aria-label",
-          isLight
-            ? "Переключить на тёмную тему"
-            : "Переключить на светлую тему"
+          "Включить тёмную тему"
         );
 
-
-        if (themeColor) {
-
-          themeColor.setAttribute(
-            "content",
-            isLight
-              ? "#f5f7fa"
-              : "#07090d"
-          );
-
-        }
-
-      }
-
-
-      updateThemeButton();
-
-
-      themeToggle.addEventListener(
-        "click",
-        function () {
-
-          const currentTheme =
-            html.getAttribute("data-theme");
-
-
-          const nextTheme =
-            currentTheme === "light"
-              ? "dark"
-              : "light";
-
-
-          html.setAttribute(
-            "data-theme",
-            nextTheme
-          );
-
-
-          localStorage.setItem(
-            "roman-theme",
-            nextTheme
-          );
-
-
-          updateThemeButton();
-
-        }
-      );
-
-
-      /* ===================================================
-         HEADER SCROLL
-      ==================================================== */
-
-      const header =
-        document.querySelector(".site-header");
-
-
-      function updateHeader() {
-
-        if (window.scrollY > 20) {
-
-          header.classList.add(
-            "header-scrolled"
-          );
-
-        } else {
-
-          header.classList.remove(
-            "header-scrolled"
-          );
-
-        }
-
-      }
-
-
-      updateHeader();
-
-
-      window.addEventListener(
-        "scroll",
-        updateHeader,
-        { passive: true }
-      );
-
-
-      /* ===================================================
-         MOUSE LIGHT
-      ==================================================== */
-
-      document.addEventListener(
-        "pointermove",
-        function (event) {
-
-          document.documentElement.style.setProperty(
-            "--mouse-x",
-            event.clientX + "px"
-          );
-
-          document.documentElement.style.setProperty(
-            "--mouse-y",
-            event.clientY + "px"
-          );
-
-        },
-        { passive: true }
-      );
-
-
-      /* ===================================================
-         SMOOTH ANCHOR
-      ==================================================== */
-
-      document.querySelectorAll(
-        'a[href^="#"]'
-      ).forEach(function (link) {
-
-        link.addEventListener(
-          "click",
-          function (event) {
-
-            const targetId =
-              this.getAttribute("href");
-
-
-            if (
-              !targetId ||
-              targetId === "#"
-            ) {
-              return;
-            }
-
-
-            const target =
-              document.querySelector(targetId);
-
-
-            if (!target) {
-              return;
-            }
-
-
-            event.preventDefault();
-
-
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start"
-            });
-
-          }
-        );
-
-      });
-
-
-      /* ===================================================
-         REVEAL ANIMATION
-      ==================================================== */
-
-      const revealElements =
-        document.querySelectorAll(
-          ".section, .service-card, .price-card, .process-step, .contact-link, .showcase-frame"
-        );
-
-
-      if (
-        "IntersectionObserver" in window &&
-        !window.matchMedia(
-          "(prefers-reduced-motion: reduce)"
-        ).matches
-      ) {
-
-        const observer =
-          new IntersectionObserver(
-            function (entries) {
-
-              entries.forEach(
-                function (entry) {
-
-                  if (
-                    entry.isIntersecting
-                  ) {
-
-                    entry.target.classList.add(
-                      "is-visible"
-                    );
-
-                    observer.unobserve(
-                      entry.target
-                    );
-
-                  }
-
-                }
-              );
-
-            },
-            {
-              threshold: 0.08
-            }
-          );
-
-
-        revealElements.forEach(
-          function (element) {
-
-            observer.observe(element);
-
-          }
+        themeColor.setAttribute(
+          "content",
+          "#f4f5f7"
         );
 
       } else {
 
-        revealElements.forEach(
-          function (element) {
+        themeToggle.setAttribute(
+          "aria-label",
+          "Включить светлую тему"
+        );
 
-            element.classList.add(
-              "is-visible"
-            );
-
-          }
+        themeColor.setAttribute(
+          "content",
+          "#07090d"
         );
 
       }
 
+    }
+
+
+    themeToggle.addEventListener(
+      "click",
+      function () {
+
+        const html =
+          document.documentElement;
+
+
+        const isLight =
+          html.classList.contains(
+            "light-theme"
+          );
+
+
+        if (isLight) {
+
+          html.classList.remove(
+            "light-theme"
+          );
+
+          html.classList.add(
+            "dark-theme"
+          );
+
+          localStorage.setItem(
+            "roman-theme",
+            "dark"
+          );
+
+        } else {
+
+          html.classList.remove(
+            "dark-theme"
+          );
+
+          html.classList.add(
+            "light-theme"
+          );
+
+          localStorage.setItem(
+            "roman-theme",
+            "light"
+          );
+
+        }
+
+
+        updateThemeButton();
+
+      }
+    );
+
+
+    updateThemeButton();
+
+  </script>
+
+
+  <!-- =====================================================
+       ПЛАВНЫЙ SCROLL
+  ====================================================== -->
+
+  <script>
+
+    document.querySelectorAll(
+      'a[href^="#"]'
+    ).forEach(function(link) {
+
+      link.addEventListener(
+        "click",
+        function(event) {
+
+          const targetId =
+            this.getAttribute("href");
+
+          if (
+            !targetId ||
+            targetId === "#"
+          ) {
+            return;
+          }
+
+
+          const target =
+            document.querySelector(
+              targetId
+            );
+
+
+          if (!target) {
+            return;
+          }
+
+
+          event.preventDefault();
+
+
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
+        }
+      );
 
     });
 
