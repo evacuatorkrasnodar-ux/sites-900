@@ -63,7 +63,7 @@
 
   <meta
     property="og:site_name"
-    content="MRS DIGITAL"
+    content="MRS"
   >
 
   <title>MRS — Создание сайтов от 1000 ₽</title>
@@ -275,7 +275,7 @@
 
     .section {
       position: relative;
-      padding: 140px 0;
+      padding: 105px 0;
     }
 
 
@@ -731,19 +731,15 @@
     .hero {
       position: relative;
 
-      min-height:
-        max(
-          760px,
-          100vh
-        );
+      min-height: 720px;
 
       display: flex;
       align-items: center;
 
       padding:
-        calc(var(--header-height) + 70px)
+        calc(var(--header-height) + 45px)
         0
-        100px;
+        65px;
     }
 
 
@@ -754,7 +750,7 @@
         minmax(0, 1.05fr)
         minmax(420px, .95fr);
 
-      gap: 70px;
+      gap: 50px;
 
       align-items: center;
     }
@@ -987,7 +983,7 @@
     .hero-visual {
       position: relative;
 
-      min-height: 560px;
+      min-height: 500px;
 
       display: grid;
       place-items: center;
@@ -1526,6 +1522,31 @@
     }
 
 
+    .service-domain {
+      cursor: pointer;
+    }
+
+
+    .service-domain-link {
+      margin-top: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--line-strong);
+      font-size: 11px;
+      font-weight: 800;
+      transition: transform var(--transition), border-color var(--transition);
+    }
+
+
+    .service-domain-link:hover {
+      transform: translateX(3px);
+      border-color: var(--text);
+    }
+
+
     .service-number {
       color: var(--text-muted);
 
@@ -1578,7 +1599,7 @@
     ====================================================== */
 
     .showcase {
-      padding: 140px 0;
+      padding: 105px 0;
 
       background:
         var(--accent);
@@ -3613,6 +3634,32 @@
 
 
     /* =====================================================
+       DOMAIN CARD
+    ====================================================== */
+
+    document.querySelectorAll(".service-domain").forEach(function (card) {
+
+      function openDomainChecker() {
+        const url = card.getAttribute("data-domain-url");
+
+        if (url) {
+          window.open(url, "_blank", "noopener,noreferrer");
+        }
+      }
+
+      card.addEventListener("click", openDomainChecker);
+
+      card.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openDomainChecker();
+        }
+      });
+
+    });
+
+
+    /* =====================================================
        REDUCED MOTION
     ====================================================== */
 
@@ -3679,7 +3726,7 @@
 
           <strong>MRS</strong>
 
-          <small>DIGITAL</small>
+          
 
         </span>
 
@@ -3713,6 +3760,10 @@
 
         <a href="#faq">
           FAQ
+        </a>
+
+        <a href="#contacts">
+          Контакты
         </a>
 
       </nav>
@@ -3941,7 +3992,7 @@
             <div class="visual-top">
 
               <span>
-                YOUR WEBSITE
+                MRS WEBSITE
               </span>
 
               <span>
@@ -3954,7 +4005,7 @@
             <div class="visual-main">
 
               <div class="visual-kicker">
-                DIGITAL PRESENCE
+                WEB PRESENCE
               </div>
 
 
@@ -4502,13 +4553,52 @@
             </h3>
 
             <p>
-              Карта, дополнительные экраны,
-              галерея, FAQ, форма заявки
-              и другие необходимые блоки.
+              Дополнительные функции можно подключить отдельно.
+              Ориентиры по стоимости: PWA — от 1 000 ₽,
+              соцсети — от 300 ₽, карта/геолокация — от 500 ₽,
+              базовая SEO-настройка — от 1 000 ₽, аналитика — от 300 ₽,
+              формы и дополнительные блоки — от 500 ₽.
             </p>
 
             <div class="service-footer">
-              CUSTOM
+              PWA · SOCIAL · MAPS · GEO · SEO · ANALYTICS
+            </div>
+
+          </article>
+
+
+          <article
+            class="service-card service-domain"
+            role="link"
+            tabindex="0"
+            data-domain-url="https://www.reg.ru/domain/new/"
+            aria-label="Подобрать свободный домен"
+          >
+
+            <div class="service-number">
+              07
+            </div>
+
+            <div class="service-icon">
+              .ru
+            </div>
+
+            <h3>
+              Домен для сайта
+            </h3>
+
+            <p>
+              Подберём адрес для вашего сайта и проверим,
+              свободен ли нужный домен. Нажмите на блок —
+              откроется сервис проверки и регистрации домена.
+            </p>
+
+            <span class="service-domain-link">
+              Подобрать домен →
+            </span>
+
+            <div class="service-footer">
+              DOMAIN CHECK
             </div>
 
           </article>
@@ -5148,7 +5238,7 @@
           <div class="projects-principle">
 
             <div class="projects-principle-mark">
-              M
+              MRS
             </div>
 
             <div>
@@ -5451,10 +5541,9 @@
 
         <div class="offer-card">
 
-          <div class="offer-decoration">
-            10%
+          <div class="offer-decoration" aria-hidden="true">
+            ★★★★★
           </div>
-
 
           <div class="offer-content">
 
@@ -5462,35 +5551,27 @@
               СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ
             </span>
 
-
             <h2>
-
               Через Авито —
 
               <span>
-                900 ₽
+                скидка 10%
               </span>
-
             </h2>
 
-
             <p>
-
-              Для одноэкранного сайта действует
-              скидка 10 % при заказе через Авито.
-
+              Для заказа через мою страницу на Авито действует
+              скидка 10%. Можно посмотреть объявление, связаться
+              со мной и оформить заказ напрямую.
             </p>
 
-
             <a
-              href="https://www.avito.ru/"
+              href="https://www.avito.ru/krasnodar/predlozheniya_uslug/sozdanie_saytov_8403401534"
               class="button button-light"
               target="_blank"
               rel="noopener noreferrer"
             >
-
-              Открыть Авито →
-
+              Открыть мою страницу на Авито →
             </a>
 
           </div>
@@ -5499,28 +5580,23 @@
           <div class="offer-side">
 
             <div>
-
               <span>
-                Обычная цена
+                Рейтинг
               </span>
 
               <strong>
-                1000 ₽
+                ★★★★★
               </strong>
-
             </div>
 
-
             <div>
-
               <span>
-                Через Авито
+                Заказ
               </span>
 
               <strong>
-                900 ₽
+                Через Авито
               </strong>
-
             </div>
 
           </div>
@@ -5812,7 +5888,7 @@
 
 
           <div class="final-mark">
-            M
+            MRS
           </div>
 
         </div>
